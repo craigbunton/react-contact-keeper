@@ -28,9 +28,7 @@ const Login = props => {
 
   const { email, password } = user;
 
-  const onChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+  const onChange = e => setUser({ ...user, [e.target.name]: e.target.value });
 
   const onSubmit = e => {
     e.preventDefault();
@@ -49,11 +47,11 @@ const Login = props => {
       <h1>
         Account <span className="text-primary">Login</span>
       </h1>
-
       <form onSubmit={onSubmit}>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email Address</label>
           <input
+            id="email"
             type="email"
             name="email"
             value={email}
@@ -61,10 +59,10 @@ const Login = props => {
             required
           />
         </div>
-
         <div className="form-group">
           <label htmlFor="password">Password</label>
           <input
+            id="password"
             type="password"
             name="password"
             value={password}
@@ -72,7 +70,6 @@ const Login = props => {
             required
           />
         </div>
-
         <input
           type="submit"
           value="Login"

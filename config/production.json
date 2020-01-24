@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://craigbunton:craigbunton@cluster0-vkuiv.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
